@@ -1,5 +1,7 @@
 <template>
 <div class="box">
+
+
      <banner></banner>
       <div class="server-box">
          <div class="server-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">服务项目/SERVICE ITEMS</div>

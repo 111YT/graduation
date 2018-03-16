@@ -10,7 +10,10 @@ import '../static/js/wow.min.js'
 import '../static/fonts/demo.css'
 import '../static/fonts/iconfont.css'
 import '../static/fonts/iconfont.js'
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
 
+Vue.use(iView);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

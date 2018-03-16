@@ -31,9 +31,12 @@
             <h1><i class="iconfont icon-sousuo"></i>TO FIND THE HOTEL</h1>
             <p>According to the destination | According to the key words</p>
             <div class="searchCity">
-              <input class="searchcity" type="text">
-              <input class="searchdate" type="text">
-              <input class="searchdate" type="text">
+              <!-- <input class="searchcity" type="text"> -->
+              <Cascader :data="data" trigger="hover"></Cascader>
+              <DatePicker type="date" show-week-numbers placeholder="2018-03-25" style="width: 170px"></DatePicker>
+              <DatePicker type="date" show-week-numbers placeholder="2018-03-27" style="width: 170px"></DatePicker>
+              <!-- <input class="searchdate" type="text">
+              <input class="searchdate" type="text"> -->
               <input class="search" type="text" value="SEARCH">
             </div>
           </div>
@@ -46,10 +49,59 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  }
-};
+        data () {
+            return {
+                data: [{
+                    value: 'beijing',
+                    label: '北京',
+                    children: [
+                        {
+                            value: 'gugong',
+                            label: '故宫'
+                        },
+                        {
+                            value: 'tiantan',
+                            label: '天坛'
+                        },
+                        {
+                            value: 'wangfujing',
+                            label: '王府井'
+                        }
+                    ]
+                }, {
+                    value: 'jiangsu',
+                    label: '江苏',
+                    children: [
+                        {
+                            value: 'nanjing',
+                            label: '南京',
+                            children: [
+                                {
+                                    value: 'fuzimiao',
+                                    label: '夫子庙',
+                                }
+                            ]
+                        },
+                        {
+                            value: 'suzhou',
+                            label: '苏州',
+                            children: [
+                                {
+                                    value: 'zhuozhengyuan',
+                                    label: '拙政园',
+                                },
+                                {
+                                    value: 'shizilin',
+                                    label: '狮子林',
+                                }
+                            ]
+                        }
+                    ],
+                }]
+            }
+        }
+    }
+
 </script>
 <style lang="less">
 .topBanner {
@@ -152,6 +204,7 @@ export default {
               letter-spacing: 1px;
               background-color: #7d6450;
               border: 2px solid #7d6450;
+              vertical-align: top;
             }
           }
         }
@@ -159,6 +212,13 @@ export default {
     }
   }
 
+}
+.ivu-input{
+  border-radius:0px;
+}
+.ivu-cascader{
+width: 170px;
+    display: inline-block;
 }
 </style>
 

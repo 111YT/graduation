@@ -135,7 +135,8 @@
         </div>
       </div>
       <ft></ft>
-      <div class="rightNav">
+      <transition name="slideL">
+      <div class="rightNav" v-if='show'>
         	<b class="close">×</b>
 					<div class="searchR">
 						<i class="iconfont icon-sousuo"></i>
@@ -150,7 +151,7 @@
               </ul>
 					</div>
 			</div>
-
+</transition>
 </div>
 </template>
 
@@ -160,6 +161,7 @@ import ft from "../common/ft";
 export default {
   data() {
     return {
+      show:false,
       image1: {
         background: "url(" + require("../../assets/img/server1.jpg") + ")"
       },

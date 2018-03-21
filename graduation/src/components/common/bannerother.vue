@@ -17,7 +17,7 @@
          </div>
          </div>
       <div class="banner">
-        <img src="../../assets/img/banner.jpg" alt="">
+        <img src="../../assets/img/bgtwo.jpg" alt="">
        <div class="bannerTwo">
          <div class="topbanner-box">
           <div class="bannerLeft">
@@ -49,13 +49,11 @@
 					</div>
 					<div class="searchR-list">
               <ul>
-                <router-link to='/Reservation'>
-                  <li>Reservation</li>
-                </router-link>
+                  <li><a href="/">MEETINGS &amp; EVENTS</a></li>
                   <li><a href="/">HOTEL &amp;RESERVATION</a></li>
                   <li><a href="/">PREFERENTIAL&amp;ACTICITIESa</a></li>
                   <router-link to='/aboutus'>
-                     <li>ABOUT&amp;US</li>
+                     <li><a href="/">ABOUT&amp;US</a></li>
                   </router-link>
                   <li><a href="/">HOTEL&amp;MAP</a></li>
               </ul>
@@ -68,79 +66,79 @@
 
 <script>
 export default {
-  data() {
-    return {
-      shows: false,
-      data: [
-        {
-          value: "beijing",
-          label: "北京",
-          children: [
-            {
-              value: "gugong",
-              label: "故宫"
-            },
-            {
-              value: "tiantan",
-              label: "天坛"
-            },
-            {
-              value: "wangfujing",
-              label: "王府井"
+
+        data () {
+
+            return {
+              shows:false,
+                data: [{
+                    value: 'beijing',
+                    label: '北京',
+                    children: [
+                        {
+                            value: 'gugong',
+                            label: '故宫'
+                        },
+                        {
+                            value: 'tiantan',
+                            label: '天坛'
+                        },
+                        {
+                            value: 'wangfujing',
+                            label: '王府井'
+                        }
+                    ]
+                }, {
+                    value: 'jiangsu',
+                    label: '江苏',
+                    children: [
+                        {
+                            value: 'nanjing',
+                            label: '南京',
+                            children: [
+                                {
+                                    value: 'fuzimiao',
+                                    label: '夫子庙',
+                                }
+                            ]
+                        },
+                        {
+                            value: 'suzhou',
+                            label: '苏州',
+                            children: [
+                                {
+                                    value: 'zhuozhengyuan',
+                                    label: '拙政园',
+                                },
+                                {
+                                    value: 'shizilin',
+                                    label: '狮子林',
+                                }
+                            ]
+                        }
+                    ],
+                }]
             }
-          ]
         },
-        {
-          value: "jiangsu",
-          label: "江苏",
-          children: [
-            {
-              value: "nanjing",
-              label: "南京",
-              children: [
-                {
-                  value: "fuzimiao",
-                  label: "夫子庙"
-                }
-              ]
-            },
-            {
-              value: "suzhou",
-              label: "苏州",
-              children: [
-                {
-                  value: "zhuozhengyuan",
-                  label: "拙政园"
-                },
-                {
-                  value: "shizilin",
-                  label: "狮子林"
-                }
-              ]
-            }
-          ]
+        methods: {
+          changeRight(){
+            this.shows=true
+          },
+          hideSlide(){
+            this.shows=false
+          }
         }
-      ]
-    };
-  },
-  methods: {
-    changeRight() {
-      this.shows = true;
-    },
-    hideSlide() {
-      this.shows = false;
     }
-  }
-};
+
 </script>
 <style lang="less">
 .topBanner {
   width: 100%;
   .topTab {
     width: auto;
-    height: 50px;
-    z-index: 90;
+        z-index: 90;
     position: relative;
+    height: 50px;
     background-color: #111111;
     .topTab-box {
       margin: 0 auto;
@@ -168,6 +166,11 @@ export default {
     position: relative;
     height: 880px;
     overflow: hidden;
+    img{
+      width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    }
     .bannerTwo {
       width: 100%;
       top: 0;
@@ -243,89 +246,90 @@ export default {
       }
     }
   }
+
 }
-.ivu-input {
-  border-radius: 0px;
+.ivu-input{
+  border-radius:0px;
 }
-.ivu-cascader {
-  width: 170px;
-  display: inline-block;
+.ivu-cascader{
+width: 170px;
+    display: inline-block;
 }
-.rightNav {
-  width: 356px;
-  border-left: 1px solid #716e6a;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  // right: -725px;
-  right: 0;
-  z-index: 1001;
-  // transition: right .4s;
-  // transition-timing-function: ease-in-out;
-  background-color: rgba(0, 0, 0, 0.9);
-  .close {
-    position: absolute;
-    right: 35px;
-    top: 40px;
-    color: #fff;
-    font-size: 30px;
-    font-weight: lighter;
-    cursor: pointer;
-  }
-  i {
-    position: absolute;
-    /* right: 35px; */
-    /* top: 5px; */
-    color: #353030;
-    font-size: 30px;
-    font-weight: lighter;
-    cursor: pointer;
-    left: 5px;
-    bottom: -6px;
-  }
-  .searchR {
-    width: 280px;
-    height: 35px;
-    background-color: #fff;
-    margin-top: 147px;
-    margin-left: 40px;
-    position: relative;
-    input {
-      width: 218px;
-      padding: 5px 10px 5px 35px;
-      line-height: 25px;
-      font-size: 14px;
-      color: #333;
-      border: 0;
-      vertical-align: middle;
-      outline: 0;
+  .rightNav {
+    width: 356px;
+    border-left: 1px solid #716e6a;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    // right: -725px;
+    right: 0;
+    z-index: 1001;
+    // transition: right .4s;
+    // transition-timing-function: ease-in-out;
+    background-color: rgba(0, 0, 0, 0.9);
+    .close {
+      position: absolute;
+      right: 35px;
+      top: 40px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: lighter;
+      cursor: pointer;
     }
-  }
-  .searchR-list {
-    ul {
-      padding-left: 40px;
-      margin: 20px 0;
-      li {
-        width: 280px;
-        height: 60px;
-        line-height: 61px;
-        color: #fff;
-        font-size: 18px;
-        list-style: none;
-        margin-left: 0;
-        color: #fff;
-        text-align: left;
-        border-top: 1px solid #555352;
-        a {
+    i {
+      position: absolute;
+      /* right: 35px; */
+      /* top: 5px; */
+      color: #353030;
+      font-size: 30px;
+      font-weight: lighter;
+      cursor: pointer;
+      left: 5px;
+      bottom: -6px;
+    }
+    .searchR {
+      width: 280px;
+      height: 35px;
+      background-color: #fff;
+      margin-top: 147px;
+      margin-left: 40px;
+      position: relative;
+      input {
+        width: 218px;
+        padding: 5px 10px 5px 35px;
+        line-height: 25px;
+        font-size: 14px;
+        color: #333;
+        border: 0;
+        vertical-align: middle;
+        outline: 0;
+      }
+    }
+    .searchR-list {
+      ul {
+        padding-left: 40px;
+        margin: 20px 0;
+        li {
+          width: 280px;
+          height: 60px;
+          line-height: 61px;
           color: #fff;
-        }
-        &::first-child {
-          border-top: 0;
+          font-size: 18px;
+          list-style: none;
+          margin-left: 0;
+          color: #fff;
+          text-align: left;
+          border-top: 1px solid #555352;
+          a {
+            color: #fff;
+          }
+          &::first-child {
+            border-top: 0;
+          }
         }
       }
     }
   }
-}
 </style>
 
 

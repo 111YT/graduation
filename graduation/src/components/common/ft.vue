@@ -5,12 +5,10 @@
         <div class="footnav">
           <ul>
             <li>首页</li>
-            <li>首页</li>
-            <li>首页</li>
-            <li>首页</li>
-            <li>首页</li>
-            <li>首页</li>
-            <li>首页</li>
+            <li>酒店预订</li>
+            <li>优惠活动</li>
+            <li>酒店地图</li>
+            <li>关于我们</li>
           </ul>
         </div>
         <div class="logos">

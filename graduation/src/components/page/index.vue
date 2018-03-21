@@ -1,7 +1,5 @@
 <template>
 <div class="box">
-
-
      <banner></banner>
       <div class="server-box">
          <div class="server-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">服务项目/SERVICE ITEMS</div>
@@ -99,7 +97,7 @@
                <div class="room-img">
                  <img  src="../../assets/img/room4.jpg" alt="">
                </div>
-               <div class="room-title">豪华大床房房</div>
+               <div class="room-title">豪华大床房</div>
                <span>立即预订</span>
             </li>
             <li class="wow slideInUp" data-wow-duration="1s" data-wow-delay="0.8s">
@@ -128,32 +126,69 @@
           </div>
           <div class="newsR wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>
+                <div class="red-box">
+                  <span style="font-size: 30px;">10</span>
+                   <span style="font-size: 14px;margin-top: -45px;">2018-3</span>
+                </div>
+                <div class="newrlist">
+                  <div class="news-title">探访成都首家无人酒店：手机订房 刷脸入住</div>
+                  <div class="news-text">中新网成都3月14日电 (记者 贺劭清)手机订房、刷脸入住、没有前台、退房无人查房……成都首家无人酒店2018年元旦开业，开业两个多月来入住顾客们交上了“从未有物品遗失”的诚信答卷。</div>
+                </div>
+              </li>
+              <li>
+                <div class="red-box">
+                  <span style="font-size: 30px;">10</span>
+                   <span style="font-size: 14px;margin-top: -45px;">2018-3</span>
+                </div>
+                <div class="newrlist">
+                  <div class="news-title">机器人服务受青睐 美华资酒店开先河</div>
+                  <div class="news-text">中新网成都3月14日电 (记者 贺劭清)中新网3月19日电 据美国《世界日报》报道，“飞利浦，这个行李帮忙拿到房间去”。“道莎，谢谢你送来晚餐”。这些被民众亲热称呼的名字，其实都不是真人，却比真人还受青睐。圣盖博市新开张不久的华资酒店，率先使用八个机器人，开全美酒店机器人服务先河，惊艳华洋民众。</div>
+                </div>
+              </li>
+              <li>
+                <div class="red-box">
+                  <span style="font-size: 30px;">10</span>
+                   <span style="font-size: 14px;margin-top: -45px;">2018-3</span>
+                </div>
+                <div class="newrlist">
+                  <div class="news-title">伊斯坦布尔万达文华酒店签约</div>
+                  <div class="news-text">2月23日，万达与业主土耳其Mar Yapı公司签约，客房150间，计划2018年底开业，是万达首家海外开业的品牌输出酒店，目前在海外其他5个项目分别位于黄金海岸、悉尼、芝加哥、洛杉矶、伦敦，这些酒店都使用了万达文华品牌。</div>
+                </div>
+              </li>
+              <li>
+                <div class="red-box">
+                  <span style="font-size: 30px;">10</span>
+                   <span style="font-size: 14px;margin-top: -45px;">2018-3</span>
+                </div>
+                <div class="newrlist">
+                  <div class="news-title">中国品牌日活动是助推东风</div>
+                  <div class="news-text">1月2日，国务院批复国家发改委《关于设立“中国品牌日”的请示》，同意自2017年起，将每年5月10日设立为“中国品牌日”。</div>
+                </div>
+              </li>
+
             </ul>
           </div>
         </div>
       </div>
+      <div class="show-box">
+          <div class="showL">
+              <img class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.5s" style="margin-left: -200px;" src="../../assets/img/lefttop.png" alt="">
+              <img style="margin-top: 151px;" src="../../assets/img/leftmiddle.png" alt="">
+              <img class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s" style="margin-top: 128px;margin-left: -200px;" src="../../assets/img/leftbottom.png" alt="">
+
+          </div>
+          <div class="showM">
+             <img src="../../assets/img/showimg.png" alt="">
+             <p>坐落在“全国工业旅游示范点”的xxx集团公司，是集旅游观光，餐饮、住宿、会议接待，商务活动等三星级涉外酒店(现正在积极申报四星)。酒店整个建筑为仿古庭院式建筑，占地—万三千二百平方米，酒店开业十多年来，始终瞄准向国内一流酒店学习，通过科学管理，培养了一大批管理人才，取得了不菲的成绩。xx酒店曾被国家旅游局评为“全国较佳星级饭店”。</p>
+          </div>
+          <div class="showR wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s">
+              <img src="../../assets/img/righttop.png" alt="">
+              <img style="margin-top: 300px;" src="../../assets/img/rightbottom.png" alt="">
+          </div>
+      </div>
       <ft></ft>
-      <transition name="slideL">
-      <div class="rightNav" v-if='show'>
-        	<b class="close">×</b>
-					<div class="searchR">
-						<i class="iconfont icon-sousuo"></i>
-						<input type="text" name="" >
-					</div>
-					<div class="searchR-list">
-              <ul>
-                  <li><a href="/">MEETINGS &amp; EVENTS</a></li>
-                  <li><a href="/">OFFERS</a></li>
-                  <li><a href="/">DINING &amp; ENTERTAINMENT</a></li>
-                  <li><a href="/">EXPLORE US</a></li>
-              </ul>
-					</div>
-			</div>
-</transition>
+      <Back-top style="bottom: 90px;"></Back-top>
 </div>
 </template>
 
@@ -163,7 +198,7 @@ import ft from "../common/ft";
 export default {
   data() {
     return {
-      show:false,
+      show: "",
       image1: {
         background: "url(" + require("../../assets/img/server1.jpg") + ")"
       },
@@ -183,6 +218,14 @@ export default {
         background: "url(" + require("../../assets/img/server6.jpg") + ")"
       }
     };
+  },
+  methods: {
+    // changechild() {
+    //   this.show = true;
+    // },
+    // hideSlide() {
+    //   this.show = false;
+    // }
   },
   components: {
     banner,
@@ -258,6 +301,7 @@ export default {
         float: left;
         width: 450px;
         height: 350px;
+        margin-top: 15px;
       }
       .newsR {
         float: right;
@@ -270,7 +314,32 @@ export default {
             height: 100px;
             margin-left: 0px;
             border-bottom: 1px solid #a0a0a0;
-            background-color: red;
+            // background-color: blue;
+            .red-box {
+              float: left;
+              margin-top: 6px;
+              width: 60px;
+              height: 70px;
+              background-color: #a61c00;
+              span {
+                display: inline-block;
+                width: 60px;
+                color: #fff;
+              }
+            }
+            .newrlist {
+              text-align: left;
+              text-align: left;
+              margin-top: 5px;
+              margin-left: 74px;
+              .news-title {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              .news-text {
+                font-size: 14px;
+              }
+            }
           }
         }
       }
@@ -317,6 +386,36 @@ export default {
       }
     }
   }
+  .show-box {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    .showL {
+      width: 230px;
+      height: 500px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .showM {
+      vertical-align: top;
+      display: inline-block;
+      width: 722px;
+      height: 500px;
+      margin-top: 100px;
+      p {
+        font-size: 14px;
+        text-align: left;
+        text-indent: 2em;
+        line-height: 24px;
+      }
+    }
+    .showR {
+      display: inline-block;
+      width: 230px;
+      height: 500px;
+    }
+  }
   .rightNav {
     width: 356px;
     border-left: 1px solid #716e6a;
@@ -329,14 +428,14 @@ export default {
     // transition: right .4s;
     // transition-timing-function: ease-in-out;
     background-color: rgba(0, 0, 0, 0.9);
-    .close{
-          position: absolute;
-    right: 35px;
-    top: 40px;
-    color: #fff;
-    font-size: 30px;
-    font-weight: lighter;
-    cursor: pointer;
+    .close {
+      position: absolute;
+      right: 35px;
+      top: 40px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: lighter;
+      cursor: pointer;
     }
     i {
       position: absolute;
@@ -382,9 +481,9 @@ export default {
           color: #fff;
           text-align: left;
           border-top: 1px solid #555352;
-            a{
-              color: #fff;
-            }
+          a {
+            color: #fff;
+          }
           &::first-child {
             border-top: 0;
           }

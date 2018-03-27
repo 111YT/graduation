@@ -12,7 +12,9 @@ import '../static/fonts/iconfont.css'
 import '../static/fonts/iconfont.js'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
+import  VueResource  from 'vue-resource'
 
+Vue.use(VueResource)
 Vue.use(iView);
 Vue.config.productionTip = false
 

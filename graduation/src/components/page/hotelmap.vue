@@ -179,4 +179,5 @@ export default {
     }
   }
 }
+.topBanner .banner .bannerTwo .topbanner-box .bannerRight h1{margin-top: 0px;}
 </style>

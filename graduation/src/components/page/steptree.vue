@@ -1,0 +1,312 @@
+<template>
+  <div class="one">
+            <div class="right-pass">
+            <div class="mail_box">
+                性别：
+      <input type="radio" name="bm" value="1"/>男 <input name="bm" type="radio" value="2"/>女
+
+                <Icon type="checkmark-round"></Icon>
+
+            </div>
+            <div class="mail_box">
+                手机号：
+                <input type="password" name="" class="inp" @input="inputValid('password1')" >
+                <span  >手机号格式不正确</span>
+                <Icon type="checkmark-round"></Icon>
+            </div>
+            <div class="mail_box lef">
+                身份证号：
+                <input type="password" name="" class="inp" @input="inputValid('password2')" >
+                <span >身份证号格式不正确</span>
+                <Icon type="checkmark-round"></Icon>
+            </div>
+        </div>
+
+        <div class="botton_two">
+            <span class="butt" @click="nextStep()" :class="{green:this.greening =='11' && !wait}">下一步</span>
+        </div>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style lang='less'>
+
+    .protocol {
+        width: 1200px;
+        height: 800px;
+        position: absolute;
+        background: #fff;
+        top: 40px;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        margin: 0 auto;
+        opacity: 1;
+    }
+
+    .protocol_box {
+        width: 90%;
+        height: 83.5vh;
+        background: #fff;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+
+    .content_box {
+        margin: 0 auto;
+        width: 80%;
+        height: 74vh;
+        background: #fff;
+        overflow: auto;
+    }
+    .article_content {
+        width: 99%;
+        text-align: left;
+        color: #151515;
+    }
+    .return {
+        margin-top: 20px;
+        text-decoration: underline;
+        display: inline-block;
+        font-size: 14px;
+        color: #999999;
+        cursor: pointer;
+    }
+    .return:hover {
+        color: #009ae6;
+    }
+    .htmlContent {
+        text-align: center;
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    .addIcon {
+        display: inline-block;
+        /*color: #fff!important;*/
+        /*background: #00B935;*/
+        color: #00b935 !important;
+        /*width: 25px;
+          height: 25px;*/
+        font-size: 18px !important;
+        /*border-radius: 50%;*/
+        text-align: center;
+        vertical-align: top;
+        line-height: 27px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    .check_soure .serverTitle {
+        color: #009ae6;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .checkWarn {
+        color: #e96262;
+        margin-left: 10px;
+    }
+
+    .codeWarn {
+        margin-left: 16px;
+        margin-top: 11px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .whidCode {
+        width: 140px !important;
+    }
+
+    .imgCode {
+        display: inline-block;
+        width: 130px;
+        height: 50px;
+        vertical-align: top;
+    }
+
+    .imgCode img {
+        display: inline-block;
+        width: 130px;
+        height: 50px;
+        margin-top: -7px;
+        margin-left: 15px;
+    }
+
+    .distance b {
+        font-size: 14px;
+        color: #999999;
+        display: inline-block;
+        font-weight: normal;
+        color: #009ae6;
+        margin-left: 40px;
+        margin-top: 12px;
+
+        vertical-align: top;
+    }
+
+    /*.content_box {
+        margin-top: 30px;
+        width:90%;
+        margin: 0 auto;
+    }*/
+
+    .right {
+        width: 1000px;
+        height: 752px;
+        margin-top: 40px;
+        margin-left: 21px;
+        border: 1px solid #e6e6e6;
+        display: inline-block;
+    }
+
+    .right_top {
+        width: 100%;
+        height: 123px;
+        background: #f9f9f9;
+    }
+
+    .right_top_content {
+        width: 807px;
+        height: 60px;
+        margin-left: 48px;
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+
+    .chircle {
+        width: 75px;
+        height: 30px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .chircle span {
+        background: #00b935;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 50px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 38px;
+    }
+
+    .chircle b {
+        font-size: 14px;
+        color: #999999;
+        margin-top: 8px;
+        font-weight: normal;
+        display: inline-block;
+        width: 100px;
+        margin-left: -15px;
+    }
+
+    .line {
+        width: 275px;
+        height: 5px;
+        background: #d8d8d8;
+        border-radius: 3px;
+        display: inline-block;
+        margin-bottom: 33px;
+        margin-left: -5px;
+        margin-right: 9px;
+    }
+
+    .right-pass {
+        margin-top: 66px;
+        width: 883px;
+        height: 434px;
+        margin-left: 140px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .mail_box {
+        font-size: 14px;
+        margin-left: 132px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .inp {
+        width: 320px;
+        height: 37px;
+        margin-left: 20px;
+        background: #ffffff;
+        border: 1px solid #e6e6e6;
+        border-radius: 3px;
+        padding-left: 10px;
+    }
+
+    .right-pass i {
+        font-style: normal;
+        display: block;
+        font-size: 12px;
+        color: #999999;
+        width: 300px;
+        margin-top: 6px;
+        margin-left: 53px;
+        letter-spacing: 1px;
+    }
+
+    .lef {
+        margin-left: 76px;
+    }
+
+    .distance {
+        margin-top: 20px;
+        margin-left: 117px;
+    }
+
+    .check_soure {
+        margin-left: 183px;
+        text-align: left;
+    }
+
+    .check_soure span {
+        font-size: 14px;
+    }
+
+    .botton_two {
+        margin-left: 400px;
+        margin-top: 35px;
+        text-align: left;
+        height: 85px;
+    }
+
+    .botton_two span {
+        /* cursor: not-allowed; */
+        background: #e6e7ec;
+        border-radius: 3px;
+        padding: 11px 39px;
+        font-size: 14px;
+        margin-left: 20px;
+        cursor: pointer;
+        color: #999999;
+    }
+
+    .mail_box span {
+        font-size: 14px;
+        color: #e96262;
+        margin-left: 10px;
+    }
+
+    .green {
+        cursor: pointer;
+        background: #44b549 !important;
+        color: #ffffff !important;
+    }
+
+    .borderT {
+        outline: 1px solid red !important;
+    }
+
+</style>

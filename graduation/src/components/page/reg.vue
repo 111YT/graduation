@@ -157,6 +157,8 @@ export default {
       shows: false,
       stap: 1,
       imgsrc: "",
+      imgState:'',
+      captchaUUID:'',
       greening:'',
 
        nameva:false,
@@ -260,7 +262,6 @@ export default {
             // passCode: this.passCode,
             // item: this.item
         }
-      this.$http
           .post("/user/add")
           .then(res => {
             if (res.data.result == 1) {
@@ -273,6 +274,16 @@ export default {
 
            })
     }
+  },
+    mounted(){
+    // let url = ''
+    this.$http.get('http://172.27.35.5:2234/captcha').then(res=>{
+      this.imgsrc=res.data.data.src,
+      this.imgState=res.data.value,
+      this.captchaUUID=res.data.captchaUUID
+      console.log(1)
+      console.log(res.data)
+    })
   },
   components: {
     list,

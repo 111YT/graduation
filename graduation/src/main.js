@@ -12,9 +12,13 @@ import '../static/fonts/iconfont.css'
 import '../static/fonts/iconfont.js'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
-import  VueResource  from 'vue-resource'
+import axios from 'axios'
+import axcof from './lib/axios'
+ // import  VueResource  from 'vue-resource'
+axcof(axios)
+Vue.prototype.$http=axios
 
-Vue.use(VueResource)
+// Vue.use(VueResource)
 Vue.use(iView);
 Vue.config.productionTip = false
 

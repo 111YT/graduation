@@ -230,7 +230,13 @@ export default {
   components: {
     banner,
     ft
-  }
+  },
+  // mounted(){
+  //   // let url = ''
+  //   this.$http.get('http://172.17.49.2:2234/captcha').then(res=>{
+  //     console.log(1)
+  //   })
+  // }
 };
 </script>
 <style lang='less'>
